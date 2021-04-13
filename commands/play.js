@@ -107,7 +107,7 @@ const stop_song = (message, server_queue) => {
     server_queue.connection.dispatcher.end();
 }
 
-const queue_viewer = (message, server_queue) => {
+/*const queue_viewer = (message, server_queue) => {
     if(!message.member.voice.channel) return message.channel.send('Du musst dich in einem Raum befinden um diesen Command nutzen zu können!')
 
     var i;
@@ -119,7 +119,7 @@ const queue_viewer = (message, server_queue) => {
             message.channel.send(server_queue.songs[i])
         }
     }
-}
+}*/
 
 /*
 if(!server_queue) {
