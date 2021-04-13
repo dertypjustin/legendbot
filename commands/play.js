@@ -73,7 +73,7 @@ module.exports = {
     }  
 }
 
-const video_player = async(guild, song) => {
+const video_player = async(guild, song, Discord) => {
     const song_queue = queue.get(guild.id);
 
     if(!song) {
@@ -94,7 +94,7 @@ const video_player = async(guild, song) => {
     .addField(
         {value: `:musical_note: Wiedergabe von ***${song.title}*** startet!`}
     );
-    
+
     await song_queue.text_channel.send(playEmbed); 
 }
 
