@@ -26,6 +26,7 @@ module.exports = {
         .setDescription('Wenn du einen Command benutzen möchtest benutze den "-" Prefix!')
         .addFields(
             {name: 'clear, c', value: 'Löscht bis zu 100 Nachrichten aus den letzten 14 Tagen'},
+            {name: 'announcement, a', value: 'Schickt eine @everyone Nachricht in den tafelrunde chat'},
             {name: 'mute', value: 'Mutet einen User auf bestimmte oder unbestimmte Zeit'},
             {name: 'unmute', value: 'Entmutet einen User'},
             {name: 'kick', value: 'Kickt einen User'},
