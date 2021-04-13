@@ -88,14 +88,7 @@ const video_player = async(guild, song, Discord) => {
         song_queue.songs.shift();
         video_player(guild, song_queue.songs[0]);
     });
-    //await song_queue.text_channel.send(`:musical_note: Wiedergabe von ***${song.title}*** startet!`);
-    const playEmbed = new Discord.MessageEmbed()
-    .setColor('#7fff00')
-    .addField(
-        {value: `:musical_note: Wiedergabe von ***${song.title}*** startet!`}
-    );
-
-    await message.channel.send(playEmbed); 
+    await song_queue.text_channel.send(`:musical_note: Wiedergabe von ***${song.title}*** startet!`);
 }
 
 const skip_song = (message, server_queue) => {
