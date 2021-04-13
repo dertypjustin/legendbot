@@ -15,7 +15,7 @@ module.exports = {
             {name: 'play', value: 'Spiele ein YouTube Video ab'},
             {name: 'stop', value: 'Stoppe die Wiedergabe'},
             {name: 'skip', value: 'Überspringe die Wiedergabe'},
-            {name: 'image, img, bild', value: 'Zeigt das beste Bild aus Google für einen bestimmten Suchbegriff an'},
+            //{name: 'image, img, bild', value: 'Zeigt das beste Bild aus Google für einen bestimmten Suchbegriff an'},
             {name: 'help, commands', value: 'Zeigt ein Liste mit allen Commands an'}
         )
 
@@ -23,7 +23,7 @@ module.exports = {
         .setColor('#304281')
         .setTitle('Mod-Commands')
         .setURL('https://bit.ly/3vPsHE0')
-        .setDescription('Wenn du einen Command benutzen möchtest benutze den "-" Prefix!')
+        .setDescription('Wenn du einen Command benutzen möchtest benutze den "." Prefix!')
         .addFields(
             {name: 'clear, c', value: 'Löscht bis zu 100 Nachrichten aus den letzten 14 Tagen'},
             {name: 'announcement, a', value: 'Schickt eine @everyone Nachricht in den tafelrunde chat'},

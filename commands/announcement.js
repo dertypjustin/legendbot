@@ -18,9 +18,3 @@ module.exports = {
         });
     }
 }
-
-/*
-    execute(message, args, cmd, client, Discord){
-        message.channel.send('@everyone');
-    }
-*/

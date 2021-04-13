@@ -1,4 +1,9 @@
 module.exports = () => {
     console.log('LegendBot ist jetzt online!');
-    client.user.setStatus('online', '.help');
+    client.user.setPresence({
+        activity: {
+            status: 'online',
+            name: '.help'
+        }
+    });
 }
