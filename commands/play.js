@@ -115,7 +115,7 @@ const queue_viewer = (message, server_queue) => {
     if(!server_queue) {
         return message.channel.send(`🥴 Die Warteschlange ist leer!`);
     } else {
-        for(i = 0, i < server_queue.songs.length; i++){
+        for(i = 0; i < server_queue.songs.length; i++) {
             message.channel.send(server_queue.songs[i])
         }
     }
