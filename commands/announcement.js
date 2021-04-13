@@ -4,6 +4,6 @@ module.exports = {
     permissions: ['Admin', 'Moderator', 'IT-spezialist'],
     description: "Versendet eine @everone Nachricht",
     execute(message, args, cmd, client, Discord){
-        message.channel.send('@everone');
+        message.channel.send('@everyone');
     }
 }

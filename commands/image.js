@@ -8,7 +8,7 @@ const google = new Scraper({
 
 module.exports = {
     name: 'image',
-    aliases: ['img', 'bild', 'image'],
+    aliases: ['img', 'bild'],
     permissions: [],
     description: 'suche nach einem Bild auf Google',
     async execute(message, args, cmd, client, Discord){
