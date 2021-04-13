@@ -73,7 +73,7 @@ module.exports = {
     }  
 }
 
-const video_player = async(guild, song, Discord) => {
+const video_player = async(guild, song) => {
     const song_queue = queue.get(guild.id);
 
     if(!song) {
@@ -109,17 +109,26 @@ const stop_song = (message, server_queue) => {
 
 const queue_viewer = (message, server_queue) => {
     if(!message.member.voice.channel) return message.channel.send('Du musst dich in einem Raum befinden um diesen Command nutzen zu können!')
-    //for(i = 0, i < server_queue.songs.length; i++){
-    //    .addFields{name: i + , value: server_queue.songs[i]};
-    //}
+
+    var i;
 
     if(!server_queue) {
         return message.channel.send(`🥴 Die Warteschlange ist leer!`);
     } else {
-        message.channel.send(server_queue.songs).then((msg) => {
+        for(i = 0, i < server_queue.songs.length; i++){
+            message.channel.send(server_queue.songs[i])
+        }
+    }
+}
+
+/*
+if(!server_queue) {
+        return message.channel.send(`🥴 Die Warteschlange ist leer!`);
+    } else {
+        message.channel.send(server_queue.songs.).then((msg) => {
             message.delete();
         }).catch((err) => {
             throw err;
         });
     }
-}
+*/
