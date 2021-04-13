@@ -10,7 +10,7 @@ module.exports = {
 
         let messageArgs = args.join(' ');
 
-        message.channel.send('@everyone, ').then((msg) => {
+        message.channel.send('@everyone ', messageArgs).then((msg) => {
             message.delete();
         }).catch((err) => {
             throw err;
