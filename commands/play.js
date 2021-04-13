@@ -5,7 +5,7 @@ const queue = new Map();
 
 module.exports = {
     name: 'play',
-    aliases: ['skip', 'stop'],
+    aliases: ['skip', 'stop', 'queue'],
     cooldown: 0,
     description: "Spiele ein Video von YouTube ab",
     async execute(message, args, cmd, client, Discord) {
@@ -67,6 +67,8 @@ module.exports = {
             skip_song(message, server_queue);
         } else if(cmd === 'stop') {
             stop_song(message, server_queue);
+        } else if (cmd === 'queue') {
+            queue_viewer(message, server_queue);
         }
     }  
 }
@@ -103,4 +105,21 @@ const stop_song = (message, server_queue) => {
     message.channel.send(`🤫: Wiedergabe gestoppt!`);
     server_queue.songs = [];
     server_queue.connection.dispatcher.end();
+}
+
+const queue_viewer = (message, server_queue) => {
+    if(!message.member.voice.channel) return message.channel.send('Du musst dich in einem Raum befinden um diesen Command nutzen zu können!')
+    //for(i = 0, i < server_queue.songs.length; i++){
+    //    .addFields{name: i + , value: server_queue.songs[i]};
+    //}
+
+    if(!server_queue) {
+        return message.channel.send(`🥴 Die Warteschlange ist leer!`);
+    } else {
+        message.channel.send(server_queue.songs).then((msg) => {
+            message.delete();
+        }).catch((err) => {
+            throw err;
+        });
+    }
 }
