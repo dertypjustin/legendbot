@@ -5,7 +5,7 @@ const queue = new Map();
 
 module.exports = {
     name: 'play',
-    aliases: ['skip', 'stop', 'queue'],
+    aliases: ['skip', 'stop'],
     cooldown: 0,
     description: "Spiele ein Video von YouTube ab",
     async execute(message, args, cmd, client, Discord) {
@@ -67,9 +67,7 @@ module.exports = {
             skip_song(message, server_queue);
         } else if(cmd === 'stop') {
             stop_song(message, server_queue);
-        } /*else if (cmd === 'queue') {
-            queue_viewer(message, server_queue);
-        }*/
+        }
     }  
 }
 
