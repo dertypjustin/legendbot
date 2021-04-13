@@ -95,7 +95,7 @@ const video_player = async(guild, song, Discord) => {
         {value: `:musical_note: Wiedergabe von ***${song.title}*** startet!`}
     );
 
-    await song_queue.text_channel.send(playEmbed); 
+    await message.channel.send(playEmbed); 
 }
 
 const skip_song = (message, server_queue) => {
