@@ -9,8 +9,9 @@ module.exports = {
         if(!channel) return message.channel.send('Der Vorschläge Channel existiert nicht!');
 
         let messageArgs = args.join(' ');
+        let everyone = '@everyone ';
 
-        message.channel.send('@everyone ', messageArgs).then((msg) => {
+        channel.send(everyone + messageArgs).then((msg) => {
             message.delete();
         }).catch((err) => {
             throw err;
