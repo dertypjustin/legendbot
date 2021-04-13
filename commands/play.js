@@ -67,9 +67,9 @@ module.exports = {
             skip_song(message, server_queue);
         } else if(cmd === 'stop') {
             stop_song(message, server_queue);
-        } else if (cmd === 'queue') {
+        } /*else if (cmd === 'queue') {
             queue_viewer(message, server_queue);
-        }
+        }*/
     }  
 }
 
