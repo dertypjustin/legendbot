@@ -5,7 +5,7 @@ module.exports = {
     description: 'Erstelle einen Vorschlag',
 
     execute(message, args, cmd, client, discord){
-        const channel = message.guild.channels.cache.find(c => c.name === 'vorschläge');
+        const channel = message.guild.channels.cache.find(c => c.name === 'tafelrunde');
         if(!channel) return message.channel.send('Der Vorschläge Channel existiert nicht!');
 
         let messageArgs = args.join(' ');
