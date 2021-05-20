@@ -18,7 +18,7 @@ module.exports = {
             {name: '6 Datenschutz', value: 'Private Daten, wie Telefonnummern, Adressen, Passwörtern, usw. dürfen nicht öffentlich ausgetauscht werden'}
         )
         .setImage('https://static.wikia.nocookie.net/dogelore/images/0/0c/Monky.png/revision/latest/top-crop/width/360/height/450?cb=20190622222808')
-        .setFooter('Wenn du mit den Regeln einverstanden bist, gib im Chat einfach "-welcome" ein');
+        .setFooter('Wenn du mit den Regeln einverstanden bist, gib im Chat einfach ".welcome" ein');
 
         message.channel.send(newEmbed);
     }
