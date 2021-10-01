@@ -81,7 +81,7 @@ const video_player = async(guild, song) => {
     } 
 
     const stream = ytdl(song.url, {filter: 'audioonly'});
-    song_queue.connection.play(stream, {seek: 0, volume: 0.2})
+    song_queue.connection.play(stream, {seek: 0, volume: 0.5})
     .on('finish', () => {
         song_queue.songs.shift();
         video_player(guild, song_queue.songs[0]);
